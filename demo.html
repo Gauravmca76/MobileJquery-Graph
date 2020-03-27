@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<!-- <head>
+	<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" href="./jquery.mobile/demos/css/themes/default/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="./jquery.mobile/demos/_assets/css/jqm-demos.css">
+	<link rel="shortcut icon" href="./favicon.ico">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link href="./content/jquery.mobile-1.1.0.min.css" rel="stylesheet" type="text/css" />
+	<link href="./content/jquery.jqplot.css" rel="stylesheet" type="text/css" />
+	<script src="./jquery.mobile/demos/js/jquery.js"></script>
+	<script src="./jquery.mobile/demos/_assets/js/index.js"></script>
+	<script src="./jquery.mobile/demos/js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="./scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+	<script src="./scripts/jquery.mobile-1.1.0.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="./content/jquery.jqplot">
+    <style type="text/css">
+      .myChart {
+         width: 300px;
+         height: 200px;
+      }
+   </style>
+</head> -->
+<head>
+	<title>JQM Charts</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href="content/jquery.mobile-1.1.0.min.css" rel="stylesheet" type="text/css" />
+	<link href="content/jquery.jqplot.css" rel="stylesheet" type="text/css" />
+	<script src="scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+	<script src="scripts/jquery.mobile-1.1.0.min.js" type="text/javascript"></script>
+	<style type="text/css">
+		.myChart {
+			width: 300px;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div data-role="page">
+		<div data-role="header">
+			<div class = "ui-body-a ui-body">
+              <div data-role="navbar">
+                <ul>
+               <li><a href = "#">Home</a></li>
+               <li><a href = "#">Pricing</a></li>
+               <li><a href = "#">Billing Histroy</a></li>
+               <li><a href = "#">FAQ</a></li>
+               <li><a href = "#">GUEST</a></li>
+                </ul>
+            </div><!-- /navbar -->
+         </div>
+		</div>
+		<div data-role="main" class="ui-content">
+			<div id="pagePieChart" data-rockncoder-jspage="managePieChart">
+					<h1>Pie Chart</h1>
+				<section data-role="content">
+					<div id="pieChart" class="myChart"></div>
+					<button id="refreshPieChart" value="Refresh Chart">Refresh Chart</button>
+					<input type="range" id="pageBarSliderA" value="60" min="0" max="100"/>
+					<input type="range" id="pageBarSliderB" value="30" min="0" max="100"/>
+					<input type="range" id="pageBarSliderC" value="10" min="0" max="100"/>
+				</section>
+			</div>
+		</div>
+	</div>
+	<script src="scripts/jquery.jqplot.min.js" type="text/javascript"></script>
+	<script src="scripts/jqplot.pieRenderer.min.js" type="text/javascript"></script>
+	<script src="scripts/jqplot.barRenderer.min.js" type="text/javascript"></script>
+	<script src="scripts/jqplot.categoryAxisRenderer.min.js" type="text/javascript"></script>
+	<script src="scripts/underscore-min.js" type="text/javascript"></script>
+	<script src="scripts/hideAddressBar.js" type="text/javascript"></script>
+	<script src="scripts/app.js" type="text/javascript"></script>
+</body>
+</html>
