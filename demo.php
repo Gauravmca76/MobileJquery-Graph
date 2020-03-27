@@ -1,3 +1,14 @@
+<?php
+error_reporting(0);
+$conn=mysqli_connect("localhost","root","","mobilej");
+if(!$conn)
+{
+	die('Could not connect'.mysqli_error());
+}
+$sql="SELECT * FROM sample";
+$result=mysqli_query($conn,$sql);
+$row=mysqli_fetch_array($result);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,10 +33,9 @@
 		</header>
 		<section data-role="content">
 			<div id="pieChart" class="myChart"></div>
-			<button id="refreshPieChart" value="Refresh Chart" data-mini="true"></button>
-			<input type="range" id="pagePieSliderB" value="<?php $a=50; echo $a;?>" min="0" max="100"/>
-			<input type="range" id="pagePieSliderC" value="<?php $b=40; echo $b;?>" min="0" max="100"/>
-			<input type="range" id="pagePieSliderA" value="<?php $c=10; echo $c;?>" min="0" max="100"/>
+			<input type="hidden" id="pagePieSliderA" value="<?php echo $row['y1'];?>" min="0" max="100"/>
+			<input type="hidden" id="pagePieSliderB" value="<?php echo $row['y2'];?>" min="0" max="100"/>
+			<input type="hidden" id="pagePieSliderC" value="<?php echo $row['y3'];?>" min="0" max="100"/>
 		</section>
 		<h1><a href="index.php">Back To Home</a></h1>
 	</div>
